@@ -16,6 +16,16 @@ public:
     void setRadius(int radius);
     void setWidth(int width);
 };
+CTyre::CTyre()
+{
+    this->radius = 0;
+    this->width = 0;
+}
+CTyre::CTyre(int radius, int width)
+{
+    this->radius = radius;
+    this->width = width;
+}
 int CTyre::getRadius()
 {
     return radius;
@@ -71,12 +81,19 @@ int CCar::getWidth()
 {
     return this->ctyre.getWidth();
 }
+CTyre CCar::getCTyre()
+{
+    return this->ctyre;
+}
 int main()
 {
     int price, radius, width;
     cin >> price >> radius >> width;
     CTyre ctyre(radius, width);
     CCar car(price, ctyre);
-    cout << "Price: " << car.getPrice() << " " << "Radius:" << ctyre.getRadius() << " " << "width:" << ctyre.getWidth() << endl;
+    cout << "Price=" << car.getPrice() << " " << "Radius=" << car.getCTyre().getRadius() << " " << "width=" << car.getCTyre().getWidth() << endl;
+
+    CCar car1;
+    cout << "Price=" << car1.getPrice() << " " << "Radius=" << car1.getCTyre().getRadius() << " " << "width=" << car1.getCTyre().getWidth() << endl;
     return 0;
 }
