@@ -3,6 +3,11 @@
         "ostream": "cpp",
         "__bit_reference": "cpp",
         "ios": "cpp",
-        "random": "cpp"
+        "random": "cpp",
+        "iostream": "cpp",
+        "chrono": "cpp",
+        "iomanip": "cpp",
+        "typeinfo": "cpp",
+        "text_encoding": "cpp"
     }
 }
